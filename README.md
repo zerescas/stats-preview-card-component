@@ -24,15 +24,15 @@ Users should be able to:
 
 ### Screenshots
 
-<em>PLACEHOLDER</em><br>
+![](/images/screenshots/screenshot-desktop.jpeg)<br>
 <strong>Desktop</strong><br>
 
-<em>PLACEHOLDER</em><br>
+![](/images/screenshots/screenshot-mobile.jpeg)<br>
 <strong>Mobile</strong>
 
 ### Links
 
-- Live Site URL: [placeholder]()
+- Live Site URL: [https://zerescas.github.io/stats-preview-card-component/](https://zerescas.github.io/stats-preview-card-component/)
 
 ## My process
 
