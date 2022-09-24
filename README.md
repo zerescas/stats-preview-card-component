@@ -79,8 +79,6 @@ BEM is a naming convention for CSS class names. It consists of:
 }
 ```
 
-Improve my HTML / CSS knowledges.
-
 ## Author
 
 - Twitter - [https://twitter.com/zerescas](https://twitter.com/zerescas)
