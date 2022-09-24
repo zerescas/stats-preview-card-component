@@ -11,6 +11,7 @@ This is a solution to the [Stats preview card component challenge on Frontend Me
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
+    -[BEM](#bem)
 - [Author](#author)
 
 ## Overview
@@ -42,19 +43,39 @@ Users should be able to:
 
 ### What I learned
 
+#### BEM
+BEM is a naming convention for CSS class names. It consists of:
+  - Block (Component)
+  - Element (Child)
+  - Modifier
+
 ```css
-.element>*{
-  margin-bottom: 1rem;
+[block]__[element]--[modifier] {
+
 }
 
-.element>*:last-child {
-  margin-bottom: 0;
+.parent {
+  /* ... */
 }
 
-/* Equal to below */
+.parent__header {
+  /* ... */
+}
 
-.element>*:not(:last-child) {
-  margin-bottom: 1rem;
+.parent__description {
+  /* ... */
+}
+
+.parent__img {
+  /* ... */
+}
+
+.btn {
+  /* ... */
+}
+
+.btn--primary {
+  /* ... */
 }
 ```
 

@@ -1,0 +1,253 @@
+:root {
+    /*=====
+    Primary Colors
+    =====*/
+
+    /* Main background */
+    --very-dark-blue: hsl(233, 47%, 7%);
+
+    /* Card background */
+    --dark-desaturated-blue: hsl(244, 38%, 16%);
+
+    /* Accent */
+    --soft-violet: hsl(277, 64%, 61%);
+
+    /*=====
+    Neutral Colors
+    =====*/
+
+    /* Main heading, stats */
+    --white: hsl(0, 0%, 100%);
+
+    /* Main paragraph */
+    --slightly-transparent-white-075: hsla(0, 0%, 100%, 0.75);
+
+    /* Stat headings */
+    --slightly-transparent-white-060: hsla(0, 0%, 100%, 0.6);
+}
+
+body {
+    background-color: var(--very-dark-blue);
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+main {
+    align-items: center;
+    display: flex;
+    flex-flow: column nowrap;
+    flex: 1 0 0;
+    justify-content: center;
+    padding: 1rem;
+}
+
+/* Helpers */
+
+.space-1em {
+    flex: 0 0 1em;
+}
+
+.space-1_5em {
+    flex: 0 0 1.5em;
+}
+
+.space-2em {
+    flex: 0 0 2em;
+}
+
+.space-full {
+    flex: 1 0 0;
+}
+
+.accent-text {
+    color: var(--soft-violet);
+}
+
+/* Stats preview card */
+
+.stats-preview-card {
+    background-color: var(--dark-desaturated-blue);
+    border-radius: .5em;
+    display: flex;
+    height: 445px;
+    max-width: 1110px;
+    overflow: hidden;
+    transition: 0.1s ease;
+}
+
+/* Info: Even two cells in card  */
+.stats-preview-card__content-wrapper,
+.stats-preview-card__img-wrapper {
+    flex: 1 0 0;
+}
+
+/* Content of stats preview card */
+
+.stats-preview-card__content {
+    display: flex;
+    flex-flow: column nowrap;
+    height: 100%;
+    padding: 4.4em;
+    padding-bottom: 4.15em;
+    margin-right: 2em;
+}
+
+.stats-preview-card__header {
+    color: var(--white);
+    font-family: 'Inter', sans-serif;
+    font-size: 2.25em;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+.stats-preview-card__description {
+    color: var(--slightly-transparent-white-075);
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 0.9375em;
+    font-weight: 200;
+    letter-spacing: .03em;
+    line-height: 1.7;
+}
+
+/* Stats container and stat items */
+
+.stats-preview-card__stats-container {
+    display: flex;
+}
+
+.stats-preview-card__stat {
+    margin-right: 4em;
+}
+
+.stats-preview-card__stat:last-child {
+    margin-right: 0;
+}
+
+.stats-preview-card__stat-data {
+    color: var(--white);
+    font-family: 'Inter', sans-serif;
+    font-size: 1.6em;
+    font-weight: 700;
+}
+
+.stats-preview-card__stat-name {
+    color: var(--slightly-transparent-white-060);
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: .75em;
+    font-weight: 300;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+}
+
+/* Image in Stat preview card */
+
+.stats-preview-card__img-wrapper {
+    background-color: var(--soft-violet);
+}
+
+.stats-preview-card__img-wrapper>* {
+    height: 100%;
+    width: 100%;
+}
+
+.stats-preview-card__img {
+    filter: contrast(.85) brightness(1.1);
+    height: 100%;
+    max-width: unset;
+    mix-blend-mode: multiply;
+    opacity: .8;
+    width: 100%;
+}
+
+/* Attribution */
+
+.attribution {
+    color: var(--slightly-transparent-white-060);
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 0.85em;
+}
+
+.attribution a {
+    color: var(--soft-violet);
+    text-decoration: none;
+}
+
+@media screen and (max-width: 1150px) {
+
+    /* Stats preview card and its content */
+
+    .stats-preview-card {
+        flex-flow: column-reverse nowrap;
+        height: 700px;
+        max-width: 450px;
+        text-align: center;
+    }
+
+    .stats-preview-card__content {
+        padding: 2.5em;
+        margin-right: 0;
+    }
+
+    .stats-preview-card__header {
+        font-size: 1.8em;
+        margin-bottom: 1.2rem;
+    }
+
+    .stats-preview-card__img-wrapper {
+        flex: 0 0 0;
+    }
+
+    /* Stats container */
+
+    .stats-preview-card__stats-container {
+        justify-content: center;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+
+    /* Stats preview card and its content */
+
+    .stats-preview-card {
+        flex-flow: column-reverse nowrap;
+        height: 805px;
+        max-width: 330px;
+        text-align: center;
+    }
+
+    .stats-preview-card__content {
+        padding: 2.5em 1.75em;
+        margin-right: 0;
+    }
+
+    .stats-preview-card__header {
+        font-size: 1.8em;
+        margin-bottom: 1rem;
+    }
+
+    .stats-preview-card__img-wrapper {
+        flex: 0 0 0;
+    }
+
+    /* Stats container and stat items */
+
+    .stats-preview-card__stats-container {
+        flex-flow: column nowrap;
+    }
+
+    .stats-preview-card__stat {
+        margin-bottom: 1em;
+        margin-right: 0;
+    }
+
+    .stats-preview-card__stat:last-child {
+        margin-bottom: 0;
+    }
+
+    /* Attribution */
+
+    .attribution {
+        font-size: 0.75em;
+    }
+}
